@@ -33,7 +33,7 @@ Foram criados dois pacotes para a melhor organização das classes
 
 - com.barbsmfe.cashMachine.test
 
-        Neste pacote estão os testes criados para a validação dos algoritmos, utilizando JUnit 5.
+        Neste pacote estão os testes criados para a validação dos algoritmos, utilizando JUnit.
 
 ## Lógica do Algoritmo Criado
 

@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.Map;
 import org.junit.Before;
 import static org.junit.Assert.*;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import com.barbsmfe.cashMachine.controller.AppConfig;
 import com.barbsmfe.cashMachine.domain.CashMachine;
@@ -46,24 +45,18 @@ public class CashMachineTest {
 		assertEquals(leastBanknoteMapTest, cashMachine.getLeastNumberOfBanknotes(30));
 	}
 
-	@Test
+	@Test(expected = IllegalArgumentException.class)
 	public void testIfDesiredValueCannotBeTakenFromTheCashMachine() {
-		assertThrows(IllegalArgumentException.class, () -> {
-			cashMachine.getLeastNumberOfBanknotes(155);
-		});
+		cashMachine.getLeastNumberOfBanknotes(155);
 	}
 
-	@Test
+	@Test(expected = IllegalArgumentException.class)
 	public void testIfDesiredValueIsNegativeAndCannotBeTakenFromTheCashMachine() {
-		assertThrows(IllegalArgumentException.class, () -> {
-			cashMachine.getLeastNumberOfBanknotes(-10);
-		});
+		cashMachine.getLeastNumberOfBanknotes(-10);
 	}
 
-	@Test
+	@Test(expected = IllegalArgumentException.class)
 	public void testIfDesiredValueIsZeroAndCannotBeTakenFromTheCashMachine() {
-		assertThrows(IllegalArgumentException.class, () -> {
-			cashMachine.getLeastNumberOfBanknotes(0);
-		});
+		cashMachine.getLeastNumberOfBanknotes(0);
 	}
 }
