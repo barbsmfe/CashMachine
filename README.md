@@ -24,10 +24,15 @@ O código foi organizado da seguinte maneira:
 Foram criados dois pacotes para a melhor organização das classes
 
 - com.barbsmfe.cashMachine.controller 
+
         Neste pacote está a classe Main, responsável pela execução do código e também a classe AppConfig, usada para injeção de dependências com Spring.
+
 - com.barbsmfe.cashMachine.domain
+
         Neste pacote está a classe CashMachine, nesta classe estão os algoritmos que concluem o objetivo desde exercício.
+
 - com.barbsmfe.cashMachine.test
+
         Neste pacote estão os testes criados para a validação dos algoritmos, utilizando JUnit 5.
 
 ## Lógica do Algoritmo Criado
@@ -62,8 +67,11 @@ O usuário deve então digitar o valor desejado e apertar a tecla Enter, após i
 Exemplo de execução:
 
 Type the value you wish to take from this cash machine: 
+
 80
+
 -- NUMBER OF BANKNOTES --
+
 {50=1, 100=0, 20=1, 10=1}
 
 
